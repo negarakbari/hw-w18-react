@@ -1,0 +1,41 @@
+.add-todo{
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    width: 99%;
+    background-color: #fff;
+    padding: 20px;
+}
+.add-todo-top{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.add-todo-bottom{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 99%;
+}
+.input{
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.add-btn{
+    background-color: #6249bf;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+} 
