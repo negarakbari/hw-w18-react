@@ -1,0 +1,23 @@
+.header {
+    background-color: #6249bf;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+}
+
+.header-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size:x-large;
+}
+
+.status-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
