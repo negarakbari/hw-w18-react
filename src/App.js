@@ -16,10 +16,9 @@ function App() {
         </div>
         <div className='main__left'>
           <AddTodo />
-        </div>
-        <div>
           <Worklist />
         </div>
+
 
       </main>
 

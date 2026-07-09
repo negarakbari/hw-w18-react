@@ -1,0 +1,53 @@
+.workList {
+    width: 100%;
+    border: solid 2px #dadada;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.work-cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: aqua;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.work-cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.work-cart-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.status-doing {
+    background-color: #fff1c8;
+    color: #9c7605;
+}
+
+.status-done {
+    background-color: #baedcf;
+    color: #128542;
+}
+
+.status {
+    padding: 2px 12px;
+    border-radius: 4px;
+    width: 100px;
+    text-align:center;
+    font-weight: bold;
+}
