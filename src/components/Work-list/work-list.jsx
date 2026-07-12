@@ -46,19 +46,7 @@ const { isSubmitting, filterStatus } = props;
   };
 
   const deleteHandler = (id) => {
-    deleteData(id).then(() => dataHandler());
-  };
-
-  const checkHandler = (id, currentStatus) => {
-    setToDOs((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, status: !currentStatus } : item
-      )
-    );
-
-    updateStatus(id, !currentStatus).catch(() => {
-      dataHandler();
-    });
+    deleteData(id).then(()=> dataHandler());
   };
 
 // Filter-status
