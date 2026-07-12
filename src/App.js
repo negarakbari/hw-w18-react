@@ -4,6 +4,7 @@ import Header from './components/header/header';
 import AddTodo from './components/Add-todo/AddTodo';
 import { Worklist } from './components/Work-list/work-list';
 import { useState } from 'react';
+import './index.css';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
         </div>
         <div className='main__left'>
-          <AddTodo isSubmitting={isSubmitting} setIsSubmitting={setIsSubmitting}/>
+          <AddTodo isSubmitting={isSubmitting} setIsSubmitting={setIsSubmitting} />
           <Worklist isSubmitting={isSubmitting} />
         </div>
 

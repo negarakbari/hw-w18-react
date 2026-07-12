@@ -1,16 +1,16 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App{
+.App {
     background-color: #f6f5fc;
     height: 100vh;
-    
+
 }
 
-main{
+main {
     display: flex;
     width: 100%;
     gap: 40px;
@@ -18,13 +18,14 @@ main{
     padding: 28px;
 }
 
-.main__left{
+.main__left {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 70%;
 }
-.main__right{
+
+.main__right {
     display: flex;
     flex-direction: column;
     gap: 20px;

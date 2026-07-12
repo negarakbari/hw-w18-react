@@ -3,8 +3,8 @@ import "./AddTodo.css";
 import { useState } from "react";
 import { BASE_URL } from "../../server/constants";
 
-function AddTodo({setIsSubmitting , isSubmitting}) {
-  
+function AddTodo({ setIsSubmitting, isSubmitting }) {
+
   const [formValue, setFormValue] = useState({
     title: "",
     checked: false,
@@ -25,7 +25,7 @@ function AddTodo({setIsSubmitting , isSubmitting}) {
       const data = await response.json()
     } catch (error) {
       console.error(error)
-    } finally{
+    } finally {
       setIsSubmitting(false)
     }
   }
@@ -33,7 +33,7 @@ function AddTodo({setIsSubmitting , isSubmitting}) {
   return (
     <div className="add-todo" style={{ direction: "rtl" }}>
       <div className="add-todo-top">
-        <CirclePlus />
+        <CirclePlus className="add-todo-icon" size={28} color="#7c3aed" />
         <span>افزودن کار جدید </span>
       </div>
 
