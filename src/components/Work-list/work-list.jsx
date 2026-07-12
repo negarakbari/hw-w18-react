@@ -29,6 +29,8 @@ const updateStatus = async (id, status) => {
 export const Worklist = (props) => {
   const [toDos, setToDOs] = useState([]);
   const [loading, setLoading] = useState(false);
+// filter
+const { isSubmitting, filterStatus } = props;
 
   useEffect(() => {
     dataHandler();
@@ -44,31 +46,44 @@ export const Worklist = (props) => {
   };
 
   const deleteHandler = (id) => {
-    deleteData(id).then(() => dataHandler());
+    deleteData(id).then(()=> dataHandler());
   };
 
-  const checkHandler = (id, currentStatus) => {
-    setToDOs((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, status: !currentStatus } : item
-      )
-    );
+const checkHandler = (id, currentStatus) => {
+setToDOs((prev) =>
+prev.map((item) =>
+item.id === id ? { ...item, status: !currentStatus } : item
+)
+);
 
-    updateStatus(id, !currentStatus).catch(() => {
-      dataHandler();
-    });
-  };
+updateStatus(id, !currentStatus).catch(() => {
+dataHandler();
+});
+};
+
+// Filter-status
+  const filteredToDos = toDos.filter((work) => {
+    if (filterStatus === "done") {
+      return work.status === true;
+    }
+    if (filterStatus === "doing") {
+      return work.status === false;
+    }
+    return true;
+  });
+  //////////
+
 
   return (
     <div className="workList">
       <span className="workList-title">
         <List className="workList-icon" size={28} color="#7c3aed" />
-        <p> لیست کارها</p>
+        <p className="list-title"> لیست کارها</p>
       </span>
-      {loading ? (
+{/* filteredToDos?.map edited */}      {loading ? (
         <span className="loading-text">در حال بارگذاری...</span>
       ) : (
-        toDos?.map((work) => {
+        filteredToDos?.map((work) => {
           return (
             <div key={work.id} className="work-cart-container">
               <input

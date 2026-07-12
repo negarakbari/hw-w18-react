@@ -1,4 +1,4 @@
-import { CirclePlus } from "lucide-react";
+import { Bold, CirclePlus } from "lucide-react";
 import "./AddTodo.css";
 import { useState } from "react";
 import { BASE_URL } from "../../server/constants";
@@ -34,11 +34,11 @@ function AddTodo({ setIsSubmitting, isSubmitting }) {
     <div className="add-todo" style={{ direction: "rtl" }}>
       <div className="add-todo-top">
         <CirclePlus className="add-todo-icon" size={28} color="#7c3aed" />
-        <span>افزودن کار جدید </span>
+        <span className="add-todo-title">افزودن کار جدید </span>
       </div>
 
       <div className="add-todo-bottom">
-        <form onSubmit={handelSubmit}>
+        <form className="form-add-todo" onSubmit={handelSubmit}>
           <input
             className="input"
             type="text"

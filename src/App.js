@@ -6,9 +6,14 @@ import { Worklist } from './components/Work-list/work-list';
 import { useState } from 'react';
 import './index.css';
 import TaskStats from './components/TaskStats/Task-stats';
+import FilterStatus from './components/Filter-status/Filter-status';
 
 
 function App() {
+
+  // Filter-status
+  const [filterStatus, setFilterStatus] = useState("all");
+
 
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -18,11 +23,15 @@ function App() {
       <Header />
       <main>
         <div className='main__right'>
-          <TaskStats/>
+           <TaskStats/>
+          <FilterStatus
+            filterStatus={filterStatus}
+            setFilterStatus={setFilterStatus}
+          />         
         </div>
         <div className='main__left'>
-          <AddTodo isSubmitting={isSubmitting} setIsSubmitting={setIsSubmitting} />
-          <Worklist isSubmitting={isSubmitting} />
+          <AddTodo isSubmitting={isSubmitting} setIsSubmitting={setIsSubmitting}  />
+          <Worklist isSubmitting={isSubmitting}  filterStatus={filterStatus} />
         </div>
 
 

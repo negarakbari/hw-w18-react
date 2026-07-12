@@ -13,8 +13,11 @@
 .workList-title {
     display: flex;
     gap: 8px;
-
     align-items: center;
+}
+.list-title{
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .work-cart-container {
@@ -95,7 +98,7 @@
 
 .status-doing {
     background-color: #fff1c8;
-    color: #9c7605;
+    color: #b1870b;
 }
 
 .status-done {
