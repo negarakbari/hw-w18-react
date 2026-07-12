@@ -23,10 +23,11 @@ function App() {
       <Header />
       <main>
         <div className='main__right'>
+           <TaskStats/>
           <FilterStatus
             filterStatus={filterStatus}
             setFilterStatus={setFilterStatus}
-          />          <TaskStats/>
+          />         
         </div>
         <div className='main__left'>
           <AddTodo isSubmitting={isSubmitting} setIsSubmitting={setIsSubmitting}  />

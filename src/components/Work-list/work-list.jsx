@@ -49,6 +49,18 @@ const { isSubmitting, filterStatus } = props;
     deleteData(id).then(()=> dataHandler());
   };
 
+const checkHandler = (id, currentStatus) => {
+setToDOs((prev) =>
+prev.map((item) =>
+item.id === id ? { ...item, status: !currentStatus } : item
+)
+);
+
+updateStatus(id, !currentStatus).catch(() => {
+dataHandler();
+});
+};
+
 // Filter-status
   const filteredToDos = toDos.filter((work) => {
     if (filterStatus === "done") {
@@ -66,7 +78,7 @@ const { isSubmitting, filterStatus } = props;
     <div className="workList">
       <span className="workList-title">
         <List className="workList-icon" size={28} color="#7c3aed" />
-        <p> لیست کارها</p>
+        <p className="list-title"> لیست کارها</p>
       </span>
 {/* filteredToDos?.map edited */}      {loading ? (
         <span className="loading-text">در حال بارگذاری...</span>
